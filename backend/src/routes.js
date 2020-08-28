@@ -20,7 +20,11 @@ routes.get('/members', MemberController.index);
 routes.post('/members', MemberController.create);
 routes.delete('/members/:id', MemberController.delete);
 
+routes.get('/address', AddressController.index);
 routes.post('/address', AddressController.create);
+routes.delete('/address/:id_member', AddressController.delete);
+
+
 
 
 

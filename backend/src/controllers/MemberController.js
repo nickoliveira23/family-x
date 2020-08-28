@@ -24,7 +24,6 @@ module.exports = {
         return response.json(members);
     },
 
-
     async create(request, response) {
         const { name, email, situation, birth, rg } = request.body;
 
@@ -54,9 +53,5 @@ module.exports = {
 
             return response.status(204).send();
         }
-
-
     }
-
-
 };

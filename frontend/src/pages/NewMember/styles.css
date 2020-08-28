@@ -1,0 +1,37 @@
+.new-member-container {
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;
+    margin: 0 auto;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-member-container .content {
+    width: 100%;
+    padding: 96px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;    
+}
+
+.new-member-container .content .space {
+    margin-bottom: 15px;
+}
+
+.new-member-container .content button {
+    width: 260px;
+    
+}
+
+
+
+
+
