@@ -53,5 +53,41 @@ module.exports = {
 
             return response.status(204).send();
         }
-    }
+    },
+    /* async indexById(request, response) {
+
+        const members = await connection('member')
+            .join('address', 'id_member', '=', 'member.id')
+            .limit(30)
+            .select([
+                'member.*',
+                'address.street',
+                'address.number',
+                'address.neighborhood',
+                'address.city',
+                'address.uf',
+                'address.zip']);
+
+        return response.json(members);
+    }, */
+
+
+    async update(request, response) {
+
+        const { name, email, situation, birth, rg } = request.body;
+        
+        const { id } = request.params
+
+        await connection('member')
+        .update({
+            name,
+            email,
+            situation,
+            birth,
+            rg
+        })
+        .where({ id })
+
+        return response.send();
+    } 
 };

@@ -9,9 +9,8 @@ exports.up = function(knex) {
         table.date('uf', 2).notNullable();
         table.string('zip').notNullable();
 
-        table.integer('id_member').notNullable();
+        table.integer('id_member').references('member.id').notNullable().onDelete('CASCADE');
 
-        table.foreign('id_member').references('id').inTable('member');
     });
 };
 

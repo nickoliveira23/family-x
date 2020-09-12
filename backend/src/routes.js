@@ -17,8 +17,10 @@ routes.post('/users', UserController.create);
 routes.get('/profile', ProfileController.index);
 
 routes.get('/members', MemberController.index);
+/* routes.get('/members/:id', MemberController.indexById); */
 routes.post('/members', MemberController.create);
 routes.delete('/members/:id', MemberController.delete);
+routes.put('/members/:id', MemberController.update);
 
 routes.get('/address', AddressController.index);
 routes.post('/address', AddressController.create);
